@@ -9,7 +9,7 @@ var makeShakyDancer = function(top, left, timeBetweenSteps) {
   // this.$node = $('<span class="dancer"></span>');
   // return blinkyDancer;
   // this.step();
-  this.$node2 = $('<img src="src/images/joker2.png" class ="batmanpic" alt="batman">');
+  this.$node2 = $('<img src="src/images/joker2.png" class ="batmanpic shake" alt="batman">');
   this.$node.append(this.$node2);
   this.setPosition(top, left);
   this.change = true;

@@ -5,7 +5,7 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   // so we must keep a copy of the old version of this function
   this.oldStep = makeDancer.prototype.step;
   // this.oldStep = makeDancer.prototype.step.bind(this);
-  this.$node2 = $('<img src="src/images/super.png" class ="batmanpic" alt="batman">');
+  this.$node2 = $('<img src="src/images/super.png" class ="batmanpic shake" alt="batman">');
   this.$node.append(this.$node2);
   // this.$node = $('<span class="dancer"></span>');
   // return blinkyDancer;
