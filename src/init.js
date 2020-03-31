@@ -1,5 +1,6 @@
 $(document).ready(function() {
   window.dancers = [];
+  window.lineupcounter = 0;
 
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
@@ -22,12 +23,26 @@ $(document).ready(function() {
 
     // make a dancer with a random position
 
-    var dancer = dancerMakerFunction(
+    var dancer = new dancerMakerFunction(
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+    window.dancers.push(dancer);
   });
+
+  $('.lineupbutton').on('click', function(event) {
+    for (var dncr of window.dancers) {
+      dncr.lineUp();
+    }
+    console.log('did u line up?');
+    console.log(window.dancers);
+  });
+
+
+
+
+
 });
 
