@@ -42,4 +42,4 @@ makeDancer.prototype.setPosition = function(top, left) {
 
 makeDancer.prototype.lineUp = function () {
   this.setPosition(lineupcounter++, this.left);
-}
+};
